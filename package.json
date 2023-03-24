@@ -1,0 +1,19 @@
+{
+  "name": "bootcamp-auth-node-mysql-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js -L"
+  },
+  "dependencies": {
+    "express": "~4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "~2.0.22"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
