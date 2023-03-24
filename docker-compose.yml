@@ -4,12 +4,12 @@ services:
   db: 
     image: mysql:8.0
     environment:
-      MYSQL_DATABASE: 'myapp'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'password'
-      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
     ports:
-      - '3307:3306'
+      - '${DB_PORT}:3306'
     expose:
       - '3306'
     volumes:
@@ -18,7 +18,7 @@ services:
     build: .
     restart: always
     ports:
-      - '3000:3000'
+      - '${APP_PORT}:${APP_PORT}'
     volumes:
       - ./src:/app/src
     depends_on:
