@@ -1,5 +1,5 @@
 const message = require("../message");
-const validateFunction = require("../auth/validate");
+const { validate } = require("../auth/validate");
 const { login } = require("../auth/login");
 
 module.exports = function (app) {
@@ -9,5 +9,7 @@ module.exports = function (app) {
 
   app.post("/login", login);
 
-  app.post("/validate", validateFunction);
+  app.get("/orders", validate ,(req, res) => {
+    res.json({orders:[]})
+  });
 };
