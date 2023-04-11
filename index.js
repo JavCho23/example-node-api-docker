@@ -5,6 +5,8 @@ const app = express()
 const port = process.env.APP_PORT
 const message = require("./src/message")
 
+app.use(express.json())
+
 app.get('/', (req, res) => {
   res.send(message)
 })
