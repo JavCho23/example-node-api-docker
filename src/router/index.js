@@ -1,14 +1,13 @@
-const message = require("../message")
-const validateFunction = require("../auth/validate")
+const message = require("../message");
+const validateFunction = require("../auth/validate");
+const { login } = require("../auth/login");
 
 module.exports = function (app) {
-  app.get('/', (req, res) => {
-    res.send("sdfsd")
-  })
+  app.get("/", (req, res) => {
+    res.send("sdfsd");
+  });
 
-  app.post('/login', (req, res) => {
-    res.send("Loshiiiin")
-  })
+  app.post("/login", login);
 
-  app.post('/validate', validateFunction)
-}
+  app.post("/validate", validateFunction);
+};
