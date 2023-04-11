@@ -8,8 +8,9 @@
     "dev": "nodemon index.js -L"
   },
   "dependencies": {
+    "dotenv": "~16.0.3",
     "express": "~4.18.2",
-    "dotenv": "~16.0.3"
+    "jose": "^4.13.1"
   },
   "devDependencies": {
     "nodemon": "~2.0.22"
